@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Pien van Kalkeren
 
   #### Je startniveau:
  Rood
 
   #### Je focus:
-Responsive
+  Responsive
  
 </details>
 
@@ -36,15 +36,41 @@ Responsive
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://www.tandemcoffee.com/collections/coffees
+  https://eu.patagonia.com/gb/en/home/
+
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Home 
+  <img src="readme-images/Home/Home1.jpg" width="375px" 
+  alt="Homepagina sportmerk Patagonia">
 
+  <img src="readme-images/Home/home2.png" width="375px" 
+   alt="Homepagina sportmerk patagonia" alt="Homepagina sportmerk Patagonia">
+
+ <img src="readme-images/Home/home3.png" width="375px" 
+   alt="Homepagina sportmerk patagonia" alt="Homepagina sportmerk Patagonia">
+
+  <img src="readme-images/Home/home4.png" width="375px" 
+   alt="Homepagina sportmerk patagonia" alt="Homepagina sportmerk Patagonia">
+
+  <img src="readme-images/Home/home5.png" width="375px" 
+   alt="Homepagina sportmerk patagonia" alt="Homepagina sportmerk Patagonia">
+
+   <img src="readme-images/Home/home6.png" width="375px" 
+   alt="Homepagina sportmerk Patagonia" alt="Homepagina sportmerk Patagonia">
+
+   
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Activisme  
+  <img src="readme-images/Activismepagina/Activismepagina1.png" width="375px" alt="Activismepagina sportmerk Patagonia">
+
+   <img src="readme-images/Activismepagina/Activismepagina2.png" width="375px" alt="Activismepagina sportmerk Patagonia">
+
+  <img src="readme-images/Activismepagina/Activismepagina3.png" width="375px" alt="Activismepagina sportmerk Patagonia">
+
+  <img src="readme-images/Activismepagina/Activismepagina4.png" width="375px" alt="Activismepagina sportmerk Patagonia">
+
+  <img src="readme-images/Activismepagina/Activismepagina5.png" width="375px" alt="Activismepagina sportmerk Patagonia">
  
 </details>
 
