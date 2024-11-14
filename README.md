@@ -19,16 +19,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Pien van Kalkeren
 
   #### Je startniveau:
- Rood
+  Rood
 
   #### Je focus:
   Responsive
  
 </details>
-
-
-
-
 
 ## Je website
 
@@ -71,7 +67,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/Activismepagina/Activismepagina4.png" width="375px" alt="Activismepagina sportmerk Patagonia">
 
   <img src="readme-images/Activismepagina/Activismepagina5.png" width="375px" alt="Activismepagina sportmerk Patagonia">
- 
 </details>
 
 
@@ -83,6 +78,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+
+  Slechte moteriek: Scrol besturing is soms gevoelig. Met de pijlen op je keyboard besturen werkt prima. 
+
+  Blind slecht zien: Voor gewoon gebruik is dit slecht en is dit voer het algemeen slecht zichtbaar. Je zou hierbij de screenreader moeten gebruiken.
+
+  Spasme: Scrollen is moeilijk. Pijlen is te doen maar wordt ook snel lastig als het heftiger is. Dan zou je ook een screenreader moeten gebruiken.
+
+  screenreader:
+  1 Menu werkt goed. Er wordt duidelijk gezegd wat er staat en wat je moet doen. 
+
+  2 Sommige cards lijst hij de kop wel van en de primary action button maar dit is verder naar beneden en de normale (p) tekst lijst hij niet.
+
+  3 verteld niet wat er op de afbeelding staat.
+
+  4 headings: leest de headings niet voor. Alleen dat je op een H2 staat en soms 1 letter of een deel van de zin.
 
 </details>
 
