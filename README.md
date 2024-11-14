@@ -94,6 +94,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   4 headings: leest de headings niet voor. Alleen dat je op een H2 staat en soms 1 letter of een deel van de zin.
 
+  test WG3 
+
+  <img src="readme-images/test/testpagina1.jpeg" width="375px" alt="Test pagina 1 content & global code">
+
+   <img src="readme-images/test/testpagina2.jpeg" width="375px" alt="keyboard mobile & touch">
+
+   <img src="readme-images/test/testpagina3.jpeg" width="375px" alt="Headings lists & images">
+
+   <img src="readme-images/test/testpagina4.jpeg" width="375px" alt="Medi & controls">
+
+   <img src="readme-images/test/testpagina5.jpeg" width="375px" alt="appearence animation & color contrast">
+
 </details>
 
 
