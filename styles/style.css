@@ -17,11 +17,26 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	--primary-action: black;
 }
 
 header nav{
 	display: flex;
+	justify-content: space-between;
 }
+
+header nav li img{
+	width: 2em;
+}
+
+header nav li{
+	display: flex;
+	justify-content: space-between;}     /* vragen /*
+
+
+
+Header
+
 
 
 
