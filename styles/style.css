@@ -19,7 +19,9 @@
 	--color-background:#eee;
 }
 
-
+header nav{
+	display: flex;
+}
 
 
 
