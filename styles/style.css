@@ -20,22 +20,67 @@
 	--primary-action: black;
 }
 
-header nav{
-	display: flex;
-	justify-content: space-between;
+header nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Left, center (logo), right */
+    align-items: center;
+    gap: 10px;
 }
 
-header nav li img{
-	width: 2em;
+/* Links (links van het logo) */
+header nav ul:first-of-type {
+    display: flex;
+    justify-content: flex-start; /* Altijd links uitlijnen */
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-column: 1; 
+	flex-wrap: wrap;/* Plaats in de eerste kolom van de grid */
+	grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto auto;
 }
 
-header nav li{
-	display: flex;
-	justify-content: space-between;}     /* vragen /*
+header nav p {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    white-space: nowrap;
+    grid-column: 2; 
+}
+
+header nav ul:last-of-type {
+    display: flex;
+    justify-content: flex-end; /* Altijd rechts uitlijnen */
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-column: 3; 
+	flex-wrap: wrap;
+}
+
+
+header nav ul li img {
+    width: 1.5em;
+    display: block;
+}
+
+
+header nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header section{
+	background-image: url(../images/Home/berghero.jpg);
+
+}
 
 
 
-Header
+
 
 
 
