@@ -138,6 +138,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
+  <img src="readme-images/nav.png">
+  
+  Het was lastig om de nav goed responsive te krijgen en de posities van de buttons goed te plaatsen. en dan op groot scherm de linkjes te laten zien en en kleins cherm links de linkjes te laten verdwijnen. Deze html indeling met de hamurger menu vond ik ook lastig. 
+
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
 
