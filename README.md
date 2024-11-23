@@ -148,21 +148,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Pien                   | Sam   | Loek   | Gail  |
+  
+  | grid navigatie         |
+  | Html indeling grote nav|
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Toegangkelijkheid uitbreiden in read-me
+  - Articles maken van tweede ul op de main pagina
+  - Summary details gebruiken voor uitklap menu 
+  - H1 vestoppen en de bovenste titel een h2 maken
+  - Het logo een png maken
 
+### verbeterde breakdownschets 
+Alle punten die veranderd moeten worden heb ik groen gemaakt.
+<img src="readme-images/feedback1/feedbackframehome.jpg">
+<img src="readme-images/feedback1/feedbackactivisme.jpg">
+<img src="readme-images/feedback1/feedbackdynamisch.jpg">
 </details>
 
 
@@ -191,9 +196,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - 
 - ...
 
 </details>
