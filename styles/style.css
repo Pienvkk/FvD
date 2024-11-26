@@ -5,6 +5,380 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+	outline: 1px solid red; /* Maakt elk element zichtbaar begrensd */
+}
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+    --color-text: #111;
+    --color-background: #eee;
+    --primary-action: black;
+    --bs-border-radius: 0.5em;
+}
+
+
+
+/**********************/
+/* ALGEMENE STYLING */
+/**********************/
+header {
+    display: flex;
+    flex-direction: column; 
+	align-content: center;
+    display: grid;
+}
+
+h1{
+	display: none;
+}
+
+header > ul {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+}
+
+
+header > a {
+    color: white;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.9em;
+}
+
+header p {
+    color: black;
+} 
+header ul li {
+    display: flex;
+    flex-direction: row;
+	font-size: small;
+	justify-content: center;
+	flex-grow: 1;
+}
+
+header ul:first-of-type li a{
+	display: none;
+}
+
+header li:nth-child(3){
+	display: flex;
+}
+
+
+header section{
+	display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+}
+
+/****************/
+/* NAVIGATION */
+/****************/
+
+nav{
+	background: #fff;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr auto 1fr;
+    gap: .8rem;
+    min-height: 5.6rem;
+    display: grid;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul:first-of-type, nav ul:last-of-type{
+	grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+header img:first-of-type{
+	text-align: center;
+}
+
+nav ul:nth-child(3){
+	justify-content:start;
+}
+ /*
+nav{
+	align-content: center;
+    align-items: center;
+    display: grid;
+
+	justify-content: center;
+	background: #fff;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr auto 1fr;
+    gap: .8rem;
+    min-height: 5.6rem;
+    display: grid;
+    position: relative;
+
+	width: 100%;
+    height: auto;
+    transition: box-shadow .5s;
+}
+nav ul:last-child{
+	justify-content: end;
+}
+
+nav ul:first-child{
+	justify-content: start;
+}
+
+nav ul:last-child + nav ul:first-child{
+	grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+
+/*
+nav {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;           
+    padding: 1em;
+    background-color: #f8f8f8;
+	height: 3em;
+}
+
+
+nav ul:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;  
+}
+
+
+nav ul:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: space-around; 
+}
+
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+nav ul:last-of-type li img {
+    max-width: 120px; 
+    height: auto;     
+}
+
+
+nav ul:last-of-type li button img,
+nav ul:last-of-type li a img {
+    width: 24px; 
+    height: auto;
+}
+
+
+nav ul li button,
+nav ul li a {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+
+nav ul:last-of-type li:nth-child(4) {
+    order: 0; 
+}
+
+
+nav {
+    flex-wrap: wrap; 
+    justify-content: center;  
+}
+
+
+nav ul {
+    width: 100%; 
+    justify-content: center;  
+}
+
+
+nav ul:last-of-type {
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+
+
+nav ul:last-of-type p{
+	color: white;
+}
+
+nav ul:first-of-type li {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav ul:first-of-type li a {
+    color: black;
+}
+*/
+header ul:first-of-type a{
+    color: white;
+    text-decoration: none; 
+}
+
+header section a, main section:nth-of-type(2) a, main section:nth-child(4) button{
+	display: inline-block; 
+	text-align: center;
+
+    font-weight: bold; 
+	font-family: "futura-pt", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 0.8em;
+
+    border-radius: 1.8em; 
+    text-decoration: none;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 11em; 
+	padding: 0.5em 1em;
+    background-color: white; 
+    color: black; 
+	transition: transform 0.3s ease;
+}
+
+
+header section a:hover {
+    transform: scale(1.1); 
+}
+
+
+header ul li p {
+    color: white;
+}
+	
+header section p{
+	color: white;
+}
+
+
+
+
+/**********************/
+/* HEADER BACKGROUND */
+/**********************/
+header section{
+    background-image: url(../images/Home/berghero.jpg);
+    
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+
+    height: 25em;
+	background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #ffff;
+    font-family: "merriweather", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+/****************/
+/* MAIN STYLING */
+/****************/
+
+
+
+/******************************/
+/* SECTION 1 - GRID STYLING */
+/******************************/
+main section:nth-of-type(1) {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 1em;
+	padding-top: 1em;
+}
+
+main section:nth-of-type(1) h2{
+	display: none;
+}
+
+main section:nth-of-type(1) ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr; 
+    grid-auto-columns: minmax(250px, 1fr); 
+    gap: 1em;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+main section:nth-of-type(1) li {
+    display: grid;
+    grid-template-rows: 1fr auto; 
+    justify-items: center;
+    align-items: stretch;
+}
+
+main section:nth-of-type(1) img {
+    width: 100%; 
+    border-radius: var(--bs-border-radius);
+}
+
+
+
+/*******************************/
+/* SECTION 2 - FLEXBOX STYLING */
+/*******************************/
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -217,18 +591,18 @@ main {
 /******************************/
 /* SECTION 1 - GRID STYLING */
 /******************************/
-main section:nth-of-type(1) {
+.home main section:nth-of-type(1) {
     display: grid;
     grid-template-rows: auto auto;
     grid-gap: 1em;
 	padding-top: 1em;
 }
 
-main section:nth-of-type(1) h2{
+.home main section:nth-of-type(1) h2{
 	display: none;
 }
 
-main section:nth-of-type(1) ul {
+.home main section:nth-of-type(1) ul{
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: 1fr; 
@@ -244,14 +618,14 @@ main section:nth-of-type(1) ul {
     white-space: nowrap;
 }
 
-main section:nth-of-type(1) li {
+.home main section:nth-of-type(1) li {
     display: grid;
     grid-template-rows: 1fr auto; 
     justify-items: center;
     align-items: stretch;
 }
 
-main section:nth-of-type(1) img {
+.home main section:nth-of-type(1) img {
     width: 100%; 
     border-radius: var(--bs-border-radius);
 }
@@ -261,7 +635,7 @@ main section:nth-of-type(1) img {
 /*******************************/
 /* SECTION 2 - FLEXBOX STYLING */
 /*******************************/
-main section:nth-of-type(2) {
+.home main section:nth-of-type(2) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -275,7 +649,7 @@ main section:nth-of-type(2) {
     background-repeat: no-repeat; 
 }
 
-main section:nth-of-type(2) > ul, p {
+.home main section:nth-of-type(2) > ul, p {
     margin: 1em 0.5em 2em 1em;
     color: white;
     font-family: "futura-pt", sans-serif;
@@ -283,7 +657,7 @@ main section:nth-of-type(2) > ul, p {
     font-style: normal;
 }
 
-main section:nth-of-type(2) h2 {
+.home main section:nth-of-type(2) h2 {
     margin-left: 0.5em;
     color: white;
     font-family: "merriweather", serif;
@@ -291,15 +665,15 @@ main section:nth-of-type(2) h2 {
     font-style: normal;
 }
 
-/* Styling voor de derde sectie (Latest Stories) */
-main section:nth-child(3) {
+
+.home main section:nth-child(3) {
     padding: 1.25em;
     background-color: #f7f7f7;
     border-radius: 0.6em;
 }
 
 
-main section:nth-child(3) > ul {
+.home main section:nth-child(3) > ul {
     display: grid;  
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
 	grid-auto-flow: column;   
@@ -313,29 +687,31 @@ main section:nth-child(3) > ul {
     white-space: nowrap; 
 }
 
-/* Styling voor de individuele kaarten */
-main section:nth-child(3) > ul > li {
+
+.home main section:nth-child(3) > ul > li {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     flex-grow: 1;
+
     background-color: #e0e0e0; 
     padding: 1em;
     border-radius: 0.5em;
     height: auto; 
     overflow: hidden;
+
     min-width: 20em;  
     max-width: 20em;  
 }
 
-main section:nth-child(3) > ul > li img {
+.home main section:nth-child(3) > ul > li img {
     width: 100%;
     height: 12em; 
     object-fit: cover;
     border-radius: 0.3em;
 }
 
-main section:nth-child(3) > ul > li {
+.home main section:nth-child(3) > ul > li {
 	display: grid;
     grid-template-rows: auto 1fr auto; 
     row-gap: 0.5em;
@@ -343,9 +719,7 @@ main section:nth-child(3) > ul > li {
 }
 
 
-main section:nth-child(3) > ul > li h3 {
-    margin: 0;
-
+.home main section:nth-child(3) > ul > li h3 {
     font-family: "merriweather", serif;
     font-weight: 400;
     font-style: normal;
@@ -354,7 +728,7 @@ main section:nth-child(3) > ul > li h3 {
     white-space: normal; 
 }
 
-main section:nth-child(3) > ul > li > p {
+.home main section:nth-child(3) > ul > li > p {
     margin: 0;
     color: #555;
     font-size: 1em;
@@ -363,25 +737,25 @@ main section:nth-child(3) > ul > li > p {
     white-space: normal; 
 }
 
-main section:nth-child(3) > ul > li a {
+.home main section:nth-child(3) > ul > li a {
     color: bl;
     text-decoration: none;
     font-size: 0.8em;
     margin-top: auto; 
 }
 
-main section:nth-child(3) > ul >li:nth-child(3){
+.home main section:nth-child(3) > ul >li:nth-child(3){
 	background-image: url(../images/Home/lateststoryJirishanca.jpg);
 	background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
 }
 
-main section:nth-child(3) > ul > li a:hover {
+.home main section:nth-child(3) > ul > li a:hover {
     text-decoration: underline;
 }
 
-main section:nth-child(4){
+.home main section:nth-child(4){
 	background-image:url(../images/Home/oceanendbottomtrawling.jpg);
 	height: 50em;
     background-size: cover; 
@@ -395,12 +769,12 @@ main section:nth-child(4){
 	text-align: left;
 }
 
-main section:nth-child(4) h2{
+.home main section:nth-child(4) h2{
 	color: white;
 	margin-left: 0.6em;
 }
 
-main section:nth-child(4) button{
+.home main section:nth-child(4) button{
 	margin-left: 2em;
 }
 
@@ -411,4 +785,129 @@ footer{
 
 footer a{
 	color: white;
+}
+
+footer section:nth-child(1) ul:first-of-type li a{
+}
+
+
+
+
+
+/*******************************/
+/* STYLING - Activismepagina*/
+/*******************************/
+
+.activisme main{
+		display: flex;
+		flex-direction: column
+}
+.activisme header section{
+	display: grid; 
+    place-items: center; 
+    text-align: center;
+
+    background-image: url(../images/activisme/activismeheader.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.activisme header h2{
+	font-family: "merriweather", serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1.5em;
+
+    width: 80%; 
+    max-width: 20em;
+	justify-content: center;
+}
+
+.activisme header section p {
+    display: grid;
+	grid-template-rows: repeat(4, auto);
+    width: 20em; 
+    max-width: 50em; 
+}
+
+
+.activisme main section:nth-child(1){
+	margin-top: 4em;
+	margin-bottom: 2em;
+}
+
+.activisme main section:first-of-type > ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr)); 
+    gap: 1em; 
+    overflow-x: auto;
+    padding: 1em; 
+    list-style: none;
+}
+
+.activisme main section:first-of-type ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    box-sizing: border-box;
+    height: 18em; 
+    width: 100%; 
+    max-width: 18em; 
+
+    border-radius: 0.5em; 
+    padding: 1em; 
+    background-color: #bbbbbb;
+}
+
+.activisme main section:first-of-type h2{
+	color: #111;
+	display:block;
+}
+
+
+.activisme main section:nth-child(2){
+	background-image: unset;
+	margin-top: 0;
+	color: #111;
+}
+
+.activisme main section:nth-child(2) h2{
+	color: #111;
+}
+
+.activisme main section:nth-child(2) ul li:nth-child(2){
+	
+}
+
+.activisme main section:nth-child(2){
+margin-bottom: 2em;
+}
+
+
+.activisme main section:nth-child(2) ul{
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr)); /* Flexibel grid */
+    gap: 2em; /* Ruimte tussen de kaarten */
+    padding: 2em; /* Ruimte rond de grid */
+    justify-items: center; /* Centreer kaarten horizontaal */
+    max-width: 100%; /* Zorg ervoor dat het niet breder wordt dan de container */
+    box-sizing: border-box; /* Zorg ervoor dat padding wordt meegerekend in de breedte */
+}
+
+.activisme main section:nth-child(2) ul li{
+	display: flex;
+    flex-direction: column; /* Zet de inhoud verticaal */
+    text-align: center; /* Centreer tekst */
+    width: 100%; /* Vul de beschikbare breedte */
+    max-width: 30em;
+	height: 20em; /* Limiteer de maximale breedte */
+    background-color: #f5f5f5; /* Achtergrondkleur van de kaart */
+    border-radius: 0.5em; /* Ronde hoeken */
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1); 
+    padding: 1.5em; /* Ruimte binnen de kaart */
+	background-color: #555;
 }
