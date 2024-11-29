@@ -193,6 +193,10 @@ Alle punten die veranderd moeten worden heb ik groen gemaakt.
   | waar java voor gebruiken 
       hoe voor home animatie|
   |positioneren en grootte images activism|
+  |button verplaats bij home scroll|
+  |eerste li van tweede gaat niet in hokje|
+  |titel list activisme gaat niet in hokje|
+
 
 
 ### fotos lastige grid
