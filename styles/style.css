@@ -5,15 +5,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-	outline: 1px solid red; /* Maakt elk element zichtbaar begrensd */
 }
 
+/****************/
+/* VARIABLE */
+/****************/
 
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 :root {
     --color-text: #111;
     --color-background: #eee;
@@ -22,10 +19,15 @@
 }
 
 
+/**********************/
+/* HEADER STYLING   */
+/**********************/
 
-/**********************/
-/* ALGEMENE STYLING */
-/**********************/
+body{
+	display: flex;
+	flex-direction: column;
+}
+
 header {
     display: flex;
     flex-direction: column; 
@@ -37,6 +39,11 @@ h1{
 	display: none;
 }
 
+h2{
+	margin-left: 0.5em;
+}
+
+
 header > ul {
     justify-content: center;
     align-items: center;
@@ -44,27 +51,26 @@ header > ul {
     background-color: black;
 }
 
+header ul:first-of-type button, header ul:first-of-type button img{
+	background-color: transparent;
+	color: #fff;
+	border-color: transparent;
 
-header > a {
-    color: white;
-    font-family: "futura-pt", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 0.9em;
+	justify-content: center;
+	display: flex;
 }
 
 header p {
     color: black;
 } 
+
 header ul li {
     display: flex;
-    flex-direction: row;
 	font-size: small;
 	justify-content: center;
-	flex-grow: 1;
 }
 
-header ul:first-of-type li a{
+header ul:first-of-type li a{ /*eerste linkjes groots scherm*/
 	display: none;
 }
 
@@ -79,223 +85,6 @@ header section{
     align-items: center; 
 }
 
-body{
-	display: flex;
-	flex-direction: column;
-}
-
-/****************/
-/* NAVIGATION */
-/****************/
-
-nav{
-	background: #fff;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr auto 1fr;
-    gap: .8rem;
-    min-height: 5.6rem;
-    display: grid;
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-nav ul:first-of-type, nav ul:last-of-type{
-	grid-template-rows: auto;
-    grid-template-columns: auto auto auto auto auto;
-}
-
-header img:first-of-type{
-	text-align: center;
-}
-
-nav ul:nth-child(3){
-	justify-content:start;
-}
- /*
-nav{
-	align-content: center;
-    align-items: center;
-    display: grid;
-
-	justify-content: center;
-	background: #fff;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr auto 1fr;
-    gap: .8rem;
-    min-height: 5.6rem;
-    display: grid;
-    position: relative;
-
-	width: 100%;
-    height: auto;
-    transition: box-shadow .5s;
-}
-nav ul:last-child{
-	justify-content: end;
-}
-
-nav ul:first-child{
-	justify-content: start;
-}
-
-nav ul:last-child + nav ul:first-child{
-	grid-template-rows: auto;
-    grid-template-columns: auto auto auto auto auto;
-}
-
-
-/*
-nav {
-    display: flex;
-    justify-content: space-between;  
-    align-items: center;           
-    padding: 1em;
-    background-color: #f8f8f8;
-	height: 3em;
-}
-
-
-nav ul:first-of-type {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex: 1;  
-}
-
-
-nav ul:last-of-type {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex: 1;
-    justify-content: space-around; 
-}
-
-
-nav ul li {
-    display: flex;
-    align-items: center;
-}
-
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-
-nav ul:last-of-type li img {
-    max-width: 120px; 
-    height: auto;     
-}
-
-
-nav ul:last-of-type li button img,
-nav ul:last-of-type li a img {
-    width: 24px; 
-    height: auto;
-}
-
-
-nav ul li button,
-nav ul li a {
-    border: none;
-    background: none;
-    padding: 0;
-}
-
-
-nav ul:last-of-type li:nth-child(4) {
-    order: 0; 
-}
-
-
-nav {
-    flex-wrap: wrap; 
-    justify-content: center;  
-}
-
-
-nav ul {
-    width: 100%; 
-    justify-content: center;  
-}
-
-
-nav ul:last-of-type {
-    justify-content: space-between; 
-    width: 100%; 
-}
-
-
-
-nav ul:last-of-type p{
-	color: white;
-}
-
-nav ul:first-of-type li {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-nav ul:first-of-type li a {
-    color: black;
-}
-*/
-header ul:first-of-type a{
-    color: white;
-    text-decoration: none; 
-}
-
-header section a, main section:nth-of-type(2) a, main section:nth-child(4) button{
-	display: inline-block; 
-	text-align: center;
-
-    font-weight: bold; 
-	font-family: "futura-pt", sans-serif;
-	font-weight: 600;
-	font-style: normal;
-	font-size: 0.8em;
-
-    border-radius: 1.8em; 
-    text-decoration: none;
-    transition: all 0.3s ease; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    max-width: 11em; 
-	padding: 0.5em 1em;
-    background-color: white; 
-    color: black; 
-	transition: transform 0.3s ease;
-}
-
-
-header section a:hover {
-    transform: scale(1.1); 
-}
-
-
-header ul li p {
-    color: white;
-}
-	
-header section p{
-	color: white;
-}
-
-
-
-
-/**********************/
-/* HEADER BACKGROUND */
-/**********************/
 header section{
     background-image: url(../images/Home/berghero.jpg);
     
@@ -310,142 +99,32 @@ header section{
     background-repeat: no-repeat;
 }
 
-h1 {
+h2 {
     color: #ffff;
     font-family: "merriweather", serif;
     font-weight: 500;
     font-style: normal;
 }
 
-
-
-/****************/
-/* MAIN STYLING */
-/****************/
+.home header section h2{
+	color: white;
+}
 
 
 
 /******************************/
 /* SECTION 1 - GRID STYLING */
 /******************************/
-main section:nth-of-type(1) {
+
+.home main section:nth-of-type(1) {
     display: grid;
     grid-template-rows: auto auto;
     grid-gap: 1em;
 	padding-top: 1em;
 }
 
-main section:nth-of-type(1) h2{
+.home main section:nth-of-type(1) h2{
 	display: none;
-}
-
-main section:nth-of-type(1) ul {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: 1fr; 
-    grid-auto-columns: minmax(250px, 1fr); 
-    gap: 1em;
-
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-}
-
-main section:nth-of-type(1) li {
-    display: grid;
-    grid-template-rows: 1fr auto; 
-    justify-items: center;
-    align-items: stretch;
-}
-
-main section:nth-of-type(1) img {
-    width: 100%; 
-    border-radius: var(--bs-border-radius);
-}
-
-
-
-/*******************************/
-/* SECTION 2 - FLEXBOX STYLING */
-/*******************************/
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-    --color-text: #111;
-    --color-background: #eee;
-    --primary-action: black;
-    --bs-border-radius: 0.5em;
-}
-
-
-
-/**********************/
-/* ALGEMENE STYLING */
-/**********************/
-
-/* Header Navigation Styling */
-
-header {
-    display: flex;
-    flex-direction: column; 
-}
-
-header > ul {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: black;
-}
-
-
-header > a {
-    color: white;
-    font-family: "futura-pt", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 0.9em;
-}
-
-header p {
-    color: black;
-} 
-header ul li {
-    display: flex;
-    flex-direction: row;
-	font-size: small;
-	justify-content: center;
-	flex-grow: 1;
-}
-
-header ul:first-of-type li a{
-	display: none;
-}
-
-header li:nth-child(3){
-	display: flex;
-}
-
-
-header section{
-	display: flex; 
-    justify-content: center; 
-    align-items: center; 
 }
 
 
@@ -456,10 +135,10 @@ header section{
 nav {
     position: relative;
     display: flex;
-    justify-content: center; 
+    justify-content: space-between; 
     align-items: center;
     
-    padding: 10px 20px;
+    padding: 10px 23px;
     background-color: #f8f8f8;
 }
 
@@ -484,25 +163,23 @@ nav ul:first-of-type {
 	display: none;
 }
 
-nav ul:last-of-type {
-    position: absolute;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 150px;
-}
-
 nav ul:last-of-type p{
 	color: white;
 }
 
-nav ul:first-of-type li {
+nav li{
     display: flex;
     justify-content: space-between;
+	margin-right: 1.3em;
 }
 
 nav ul:first-of-type li a {
     color: black;
+}
+
+header nav ul li img {
+   height: 1.5em;
+   width: 1.5em;
 }
 
 header ul:first-of-type a{
@@ -510,7 +187,13 @@ header ul:first-of-type a{
     text-decoration: none; 
 }
 
-header section a, main section:nth-of-type(2) a, main section:nth-child(4) button{
+header nav ul li button{
+	background-color: transparent;
+	border-color: transparent;
+}
+
+
+header section a, main section:nth-of-type(2) a, main section:nth-child(4) button, .activisme main section:nth-child(2) ul li:nth-child(2) button{
 	display: inline-block; 
 	text-align: center;
 
@@ -525,35 +208,27 @@ header section a, main section:nth-of-type(2) a, main section:nth-child(4) butto
     transition: all 0.3s ease; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     max-width: 11em; 
-	padding: 0.5em 1em;
+	width:auto;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
     background-color: white; 
     color: black; 
 	transition: transform 0.3s ease;
 }
 
-
 header section a:hover {
     transform: scale(1.1); /* Vergroot de knop met 10% wanneer de gebruiker eroverheen beweegt */
 }
 
-header nav ul li img {
-    width: 1.5em;
-}
-
-header ul li p {
+header ul li p, header section p {
     color: white;
 }
-	
-header section p{
-	color: white;
-}
-
-
 
 
 /**********************/
 /* HEADER BACKGROUND */
 /**********************/
+
 header section{
     background-image: url(../images/Home/berghero.jpg);
     
@@ -575,19 +250,6 @@ h1 {
     font-style: normal;
 }
 
-
-
-/****************/
-/* MAIN STYLING */
-/****************/
-
-main {
-    display: flex;
-    flex-direction: column;
-}
-
-
-
 /******************************/
 /* SECTION 1 - GRID STYLING */
 /******************************/
@@ -606,7 +268,7 @@ main {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: 1fr; 
-    grid-auto-columns: minmax(250px, 1fr); 
+    grid-auto-columns: minmax(20em, 1fr); 
     gap: 1em;
 
     list-style: none;
@@ -620,14 +282,28 @@ main {
 
 .home main section:nth-of-type(1) li {
     display: grid;
-    grid-template-rows: 1fr auto; 
-    justify-items: center;
-    align-items: stretch;
+    grid-template-rows: 1fr; 
+    justify-self: start;
+}
+
+.home main section:nth-of-type(1) a{
+	background-color: #111;
+	padding:0.5em;
+	width: 5em;
+	text-align: center;
+	color: white;
+	border-radius: 20em;
+	
+	text-decoration: none;
+	font-weight: bold;
+	font-family: "futura-pt", sans-serif;
+	font-weight: 500;
+	font-style: normal;	
 }
 
 .home main section:nth-of-type(1) img {
-    width: 100%; 
     border-radius: var(--bs-border-radius);
+	width:100%;
 }
 
 
@@ -688,7 +364,7 @@ main {
 }
 
 
-.home main section:nth-child(3) > ul > li {
+.home main section:nth-child(3) ul li {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -704,14 +380,14 @@ main {
     max-width: 20em;  
 }
 
-.home main section:nth-child(3) > ul > li img {
+.home main section:nth-child(3) ul li img {
     width: 100%;
     height: 12em; 
     object-fit: cover;
     border-radius: 0.3em;
 }
 
-.home main section:nth-child(3) > ul > li {
+.home main section:nth-child(3) ul li {
 	display: grid;
     grid-template-rows: auto 1fr auto; 
     row-gap: 0.5em;
@@ -719,13 +395,14 @@ main {
 }
 
 
-.home main section:nth-child(3) > ul > li h3 {
+.home main section:nth-child(3) h2{
     font-family: "merriweather", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.4em; 
     overflow: hidden;
-    white-space: normal; 
+    white-space: normal;
+	color:black;
 }
 
 .home main section:nth-child(3) > ul > li > p {
@@ -738,7 +415,6 @@ main {
 }
 
 .home main section:nth-child(3) > ul > li a {
-    color: bl;
     text-decoration: none;
     font-size: 0.8em;
     margin-top: auto; 
@@ -771,28 +447,120 @@ main {
 
 .home main section:nth-child(4) h2{
 	color: white;
-	margin-left: 0.6em;
+	
 }
 
-.home main section:nth-child(4) button{
-	margin-left: 2em;
-}
 
 footer{
 	background-color: black;
 	color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+footer h2{
+	font-size: 1.1em;
+	font-family: "futura-pt", sans-serif;
+	font-weight: 500;
+	font-style: normal;
 }
 
 footer a{
 	color: white;
 }
 
-footer section:nth-child(1) ul:first-of-type li a{
+footer section{
+	margin-left: 0.5em;
+	margin-bottom: 2em ;
+	margin-right: 0.5em;
 }
 
+footer input{
+	border-bottom: 2px solid;
+	background-color: transparent;
+	width: 100%;
+    padding: 0;
+    font-size: 1em;
+	color:white;
+}
 
+footer section:nth-of-type(2) button{
+	display: flex;
+	text-align: left;
+	margin-top: 1em;
+	background-color: #fff;
+	padding: 1em;
+	border-radius: 2em;
+}
 
+footer section:nth-child(1) ul:first-of-type img{
+	width: 6em;
+}
 
+footer section:nth-child(1) ul:first-of-type{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+footer section:nth-child(1) ul:first-of-type h3{
+	font-family: "futura-pt", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+footer section:nth-child(3) ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+footer section:nth-child(3) li a{
+	border-color: #fff;
+	border: 3px solid;
+	background-color: transparent;
+	padding: 0.4em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-right: 1em;
+	padding-left: 1em;
+	border-radius: 2em;
+
+	font-size: 1.1em;
+	text-decoration: none;
+	font-family: "futura-pt", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+footer section:nth-child(3) li{
+	margin: 1em;
+}
+footer section:last-of-type div{
+	flex-direction: row;
+    display: flex;
+	list-style-type: none;
+	
+	font-size:0.8em;
+	font-family: "futura-pt", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+footer section:last-of-type h2{
+	margin-bottom: 1em;
+}
+
+footer section:last-of-type ul{
+	margin-bottom: 1em;
+	margin-right: 1em;
+}
+
+footer section:last-of-type ul li, footer section:last-of-type ul li a{
+	text-decoration: none;
+	list-style-type: none;
+	margin-top: 2em;
+}
 
 /*******************************/
 /* STYLING - Activismepagina*/
@@ -800,10 +568,9 @@ footer section:nth-child(1) ul:first-of-type li a{
 
 .activisme main{
 		display: flex;
-		flex-direction: column
+		flex-direction: column;
 }
 .activisme header section{
-	display: grid; 
     place-items: center; 
     text-align: center;
 
@@ -836,14 +603,17 @@ footer section:nth-child(1) ul:first-of-type li a{
 	margin-bottom: 2em;
 }
 
-.activisme main section:first-of-type > ul {
+.activisme main section:first-of-type ul {
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr)); 
-    gap: 1em; 
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); 
+	grid-template-rows: 1fr; 
     overflow-x: auto;
-    padding: 1em; 
-    list-style: none;
+	overflow-y: hidden;
+    
+	gap: 1em; 
+	list-style: none;
+	padding: 1em; 
 }
 
 .activisme main section:first-of-type ul li {
@@ -853,10 +623,8 @@ footer section:nth-child(1) ul:first-of-type li a{
     align-items: center;
     text-align: center;
 
-    box-sizing: border-box;
     height: 18em; 
     width: 100%; 
-    max-width: 18em; 
 
     border-radius: 0.5em; 
     padding: 1em; 
@@ -879,9 +647,6 @@ footer section:nth-child(1) ul:first-of-type li a{
 	color: #111;
 }
 
-.activisme main section:nth-child(2) ul li:nth-child(2){
-	
-}
 
 .activisme main section:nth-child(2){
 margin-bottom: 2em;
@@ -890,24 +655,85 @@ margin-bottom: 2em;
 
 .activisme main section:nth-child(2) ul{
 	display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr)); /* Flexibel grid */
-    gap: 2em; /* Ruimte tussen de kaarten */
-    padding: 2em; /* Ruimte rond de grid */
-    justify-items: center; /* Centreer kaarten horizontaal */
-    max-width: 100%; /* Zorg ervoor dat het niet breder wordt dan de container */
-    box-sizing: border-box; /* Zorg ervoor dat padding wordt meegerekend in de breedte */
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); 
+	grid-template-rows: 1fr; 
+    gap: 1em; 
+    padding: 0.5em; 
+    justify-items: center; 
+    max-width: 100%; 
+
+	justify-self: flex-start;
+
+
 }
 
 .activisme main section:nth-child(2) ul li{
 	display: flex;
-    flex-direction: column; /* Zet de inhoud verticaal */
-    text-align: center; /* Centreer tekst */
-    width: 100%; /* Vul de beschikbare breedte */
+    flex-direction: column; 
+    text-align: center;
+
+    width: 100%; 
     max-width: 30em;
-	height: 20em; /* Limiteer de maximale breedte */
-    background-color: #f5f5f5; /* Achtergrondkleur van de kaart */
-    border-radius: 0.5em; /* Ronde hoeken */
+	height: 20em; 
+    background-color: #f5f5f5;
+    border-radius: 0.5em; 
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1); 
-    padding: 1.5em; /* Ruimte binnen de kaart */
+    padding: 1.5em; 
 	background-color: #555;
+}
+
+.activisme main section:nth-child(2) ul li:nth-of-type(1){
+	background-color: #34317b;
+}
+
+.activisme main section:nth-child(2) ul li:nth-of-type(2){
+	background-image: url(../images/activisme/PatagoniaActionworks.jpg);
+	background-size: cover;
+}
+
+
+.activisme main section:nth-child(2) ul li:nth-of-type(3){
+	background-image: url(../images/activisme/GetFunded.jpg);
+	background-size: cover;
+}
+
+.activisme main section:nth-child(2) ul li:nth-of-type(4){
+	background-image: url(../images/activisme/OurFootprint.jpg);
+	background-size: cover;
+}
+
+
+.activisme main section:nth-child(2) ul li:nth-of-type(5){
+	background-image:url(../images/activisme/Yvon.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.activisme main section:nth-child(2) ul li:nth-of-type(6), .activisme main section:nth-child(2) ul li:nth-of-type(6) p {
+	background-color: #f5f0e0;
+	color: #111;
+}
+
+
+.activisme main section:nth-child(2) ul li:nth-of-type(7){
+	background-image:url(../images/activisme/ActivismStories.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.activisme main section:nth-child(2) ul li:nth-of-type(8){
+	background-image:url(../images/activisme/ClimateGoals.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+
+.activisme main section:nth-child(2) ul li:nth-of-type(9){
+	background-image:url(../images/activisme/businessUnusual.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.activisme main section:nth-child(2) ul button, .activisme main section:nth-child(2) ul a {
+	margin-top: 19em;
 }

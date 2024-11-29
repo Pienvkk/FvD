@@ -186,11 +186,18 @@ Alle punten die veranderd moeten worden heb ik groen gemaakt.
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  
+  | Pien                    | Sam   | Loek   | Gail  |
+  
+  | uitklap navigatie       |
+  | waar java voor gebruiken 
+      hoe voor home animatie|
+  |positioneren en grootte images activism|
+
+
+### fotos lastige grid
+<img src="./readme-images/feedback2/ActivismGrid.jpg">
+<img src="./readme-images/feedback2/ActivismGrid2.jpg">
 
 
   ### Verslag van meeting
