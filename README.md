@@ -207,8 +207,21 @@ Alle punten die veranderd moeten worden heb ik groen gemaakt.
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - 
-- ...
+
+1. postion relative aan ul van zwevende button
+calc 50% -8rem
+
+2. afbeelding eerste kaart 2de ul home width max-width 100% en width 100% aan li
+
+3. 4 kolommen en grid ereas
+
+4. kijken of je dingen dubbel heb 
+
+5. images naar svg
+
+6. light en dark mode
+
+7.costum properties-
 
 </details>
 
