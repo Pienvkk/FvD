@@ -1,27 +1,3 @@
-/*
-
-
-verwerken in read-me: 
-
-postion relative aan ul van zwevende button
-calc 50% -8rem
-
-afbeelding eerste kaart 2de ul home width max-width 100% 
-
-width 100% aan li
-
-4 kolommen en grid ereas
-
-kijken of je dingen dubbel heb 
-
-images naar svg
-
-light en dark mode
-
-costum properties
-
-*/
-
 
 /**************/
 /* CSS REMEDY */
@@ -30,6 +6,7 @@ costum properties
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 /****************/
@@ -38,19 +15,62 @@ costum properties
 
 :root {
     --color-text: #111;
+    --color-text-secondary: white;
     --color-background: #eee;
-    --primary-action: black;
-    --bs-border-radius: 0.5em;
+    --color-primary: black;
+    --color-secondary: white;
+    --color-highlight: #f8f8f8;
+    
+    --font-family-primary: "futura-pt", sans-serif;
+    --font-family-secondary: "merriweather", serif;
+    
+    --font-size-small: 0.8em;
+    --font-size-medium: 1em;
+    --font-size-large: 1.4em;
+    --font-size-xlarge: 1.5em;
+    --border-radius: 0.5em;
+    
+    --section-height-hero: 25em;
+    --section-height-large: 50em;
+    --section-padding: 1em;
+    --header-height: 4em;
+}
+
+/*
+html {
+    background-color: var( --color-background);
+    color: var(--color-text-);
+  }
+  
+@media (prefers-color-scheme:dark) {
+	:root {
+        --color-background: #121212;
+    }
+}
+
+input[type="radio"][value="light"]:checked fieldset {
+	color-scheme:light;
 }
 
 
-/**********************/
+input[type="radio"][value="dark"]:checked fieldset {
+	color-scheme:dark;
+}
+
+
+
+
+/********************/
 /* HEADER STYLING   */
 /**********************/
+
+
 
 body{
 	display: flex;
 	flex-direction: column;
+    background-color: var(--color-background);
+  
 }
 
 header {
@@ -63,6 +83,7 @@ header {
 h1{
 	display: none;
 }
+
 
 h2{
 	margin-left: 0.5em;
@@ -78,9 +99,9 @@ header > ul:first-of-type{
 }
 
 header ul:first-of-type li:nth-child(3) button svg{
-	fill:white;
-	width: 1em;
-	margin-left: 0.5em;
+	fill: var(--color-secondary);
+    width: 1em;
+    margin-left: 0.5em;
 }
 
 header ul:first-of-type button, header ul:first-of-type button img{
@@ -93,13 +114,13 @@ header ul:first-of-type button, header ul:first-of-type button img{
 }
 
 header p {
-    color: black;
+    color: var(--color-primary);
 } 
 
 header ul li {
     display: flex;
-	font-size: small;
-	justify-content: center;
+    font-size: var(--font-size-small);
+    justify-content: center;
 }
 
 header > ul:first-of-type li a{ /*eerste linkjes groots scherm*/
@@ -125,21 +146,21 @@ header section{
 	justify-content: center;
 	text-align: center;
 
-    height: 25em;
+    height: var(--section-height-hero);
 	background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
 }
 
 h2 {
-    color: #ffff;
-    font-family: "merriweather", serif;
+    color: var(--color-secondary);
+    font-family: var(--font-family-secondary);
     font-weight: 500;
     font-style: normal;
 }
 
 .home header section h2{
-	color: white;
+	color: var(--color-secondary);
 }
 
 
@@ -150,34 +171,35 @@ h2 {
 
 .home main section:nth-of-type(1) {
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr;
     grid-gap: 1em;
-	padding-top: 1em;
+    padding-top: var(--section-padding);
 }
 
 .home main section:nth-of-type(1) h2{
 	display: none;
 }
 
-
 /****************/
 /* NAVIGATION */
 /****************/
 
-nav {
+nav{
     display: flex;
     justify-content: space-between; 
     align-items: center;
     
-    padding: 10px 23px;
-    background-color: #f8f8f8;
-    position: absolute;
+    background-color: var(--color-highlight);
     width: 100%;
+}
+
+
+div > ul:nth-of-type(2) > li:nth-of-type(1) button{
+    background-color: #00947b;
 }
 
 nav p {
     margin: 0;
-    flex-grow: 1; 
     text-align: center;
     font-weight: bold;
 }
@@ -195,40 +217,87 @@ nav > ul:nth-of-type(1) {
 }
 
 nav ul:last-of-type p{
-	color: white;
+    color: var(--color-secondary);
+}
+
+nav div {
+    background-color: var(--color-secondary);
+    position: fixed;
+    translate:100% 100%;
+
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+    nav div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    header nav button:nth-of-type(2) {
+       position:fixed;
+       top: var(--header-height);
+       right: 3em;
+       z-index: 1;
+    }
+
+    div > ul:nth-of-type(1){
+    display: none;
+  }
+
+    nav ul:nth-of-type(2) div > button:last-of-type{
+    display: none;
+  }
+  }
+
+  .toonMenu{
+    translate:0% 0%;
+}
+
+.MenuWeg{
+   translate: 100% 100%;
+}
+
+nav ul:nth-of-type(2) div button:first-of-type{
+  cursor: pointer;
+}
+
+nav ul:nth-of-type(2) li:first-of-type > button{
+    cursor: pointer;
+
 }
 
 nav li{
     display: flex;
     justify-content: space-between;
-	margin-right: 1.2em;
-}
-
-nav details button svg{
-width: 1.8em;
 }
 
 nav ul:first-of-type li a {
-    color: black;
+    color: var(--color-primary);
 }
-
-nav details ul:nth-of-type(2) >  li:nth-of-type(1),  nav details ul:nth-of-type(2) >  li:nth-of-type(2){
+ 
+nav div li:first-of-type>  li:nth-of-type(1),  nav div ul:nth-of-type(2) >  li:nth-of-type(2){
     display: grid;
 }
 
-nav details ul:nth-of-type(2) >  li:nth-of-type(1)> ul, nav details ul:nth-of-type(2) >  li:nth-of-type(2)> ul{
+nav div:nth-of-type(2) li:first-of-type>  li:nth-of-type(1)> ul, nav div ul:nth-of-type(2) >  li:nth-of-type(2)> ul{
     display: none;
 }
 
-nav details ul:nth-of-type(2) > li:nth-of-type(1) > ul.toonSubMenu {
+nav div:nth-of-type(2) li:first-of-type > li:nth-of-type(1) > ul.toonSubMenu {
     display: block;               
 }
 
-nav details ul:nth-of-type(2) >  li:nth-of-type(2) >ul.toonSubMenu2{
+nav div:nth-of-type(2) li:first-of-type>  li:nth-of-type(2) >ul.toonSubMenu2{
     display: block;
 }
-
-nav details ul:nth-of-type(2) >  li:nth-of-type(1) > button, nav details ul:nth-of-type(2) >  li:nth-of-type(2)> button{
+nav div:nth-of-type(2) li:first-of-type>  li:nth-of-type(1) > button, nav details ul:nth-of-type(2) >  li:nth-of-type(2)> button{
     cursor: pointer;
 }
 
@@ -237,64 +306,67 @@ header svg, nav svg{
    width: 3em;
 }
 
-nav details:nth-of-type(1)  {
+nav ul:nth-of-type(2) li:first-of-type {
     display: grid;
     grid-column: 1;
-    grid-row: 1;
-    top: -8.5em;  
-    left: 0; 
 
-    overflow: auto;
-    z-index: 1000; 
-    width: 100%;
-    height: 100vh;
-    padding-top:9em;
-    position: absolute;
-
-    font-family: "futura-pt", sans-serif;
+    font-family: var(--font-family-primary);
     font-weight: 700;
     font-style: normal;
 }
 
-nav ul:nth-of-type(2) li details,nav ul:nth-of-type(2) li{
-    font-size: medium;
+
+nav ul:nth-of-type(2) li:first-of-type li,nav ul:nth-of-type(2) li{
+    font-size: var(--font-size-medium);
     justify-self: left;
 }
 
-nav ul:nth-of-type(2) li details,nav ul:nth-of-type(2) li button {
-    font-family: "futura-pt", sans-serif;
+nav ul:nth-of-type(2) li:first-of-type,nav ul:nth-of-type(2) li button {
+    font-family: var(--font-family-primary);
     font-weight: 700;
     font-style: normal;
 }
 
-details:nth-of-type(1) li svg{
+nav ul:nth-of-type(2) li:first-of-type:nth-of-type(1) li svg{
    width: 1em;
 }
 
 nav ul:nth-of-type(2) ul:last-of-type{
-    display: grid;
-    grid-column: 1fr auto; 
-    grid-row: 3;
+    display: flex;
+    flex-direction: column;
 }
 
-details:nth-of-type(1) ul:nth-of-type(1),details:nth-of-type(1) ul:nth-of-type(2) {
-    display: grid;
+nav ul:nth-of-type(2) li:first-of-type:nth-of-type(1) ul:nth-of-type(1),div:nth-of-type(1) ul:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
 }
 
-details summary::-webkit-details-marker {
+
+nav ul:nth-of-type(2) nav ul:nth-of-type(2) li:first-of-type > button:nth-of-type(1){
+    cursor: pointer;
+}
+
+nav div .toonMenu{
+    translate: 0% 0%;
+}
+
+.knopjeWeg {
     display: none;
 }
 
-
 nav ul:nth-of-type(2) ul:nth-of-type(3) li{
-    background-color:#555;
-    padding: 4em 5em 6em 6em;
-    border-radius: var(--bs-border-radius);
-    width: 100%;
-    text-align: center;
+  background-color: #555;
+  padding: 4em 5em 6em 6em;
+  border-radius: var(--bs-border-radius);
+  width: 20em;
+  height: 13em;
+
+  display: flex;
+  text-align: center;
+  justify-self: center;
 }
-details:nth-of-type(1)[open]{
-    background-color: #ffffff;
+div:nth-of-type(1)[open]{
+    background-color: var(--color-secondary);
     width: 100%;
     padding: 3.2rem;
     position: absolute;
@@ -302,13 +374,14 @@ details:nth-of-type(1)[open]{
     left: 0;
 }
 
-
-details li{
+nav ul:nth-of-type(2) li:first-of-type li{
     margin-top: 1.5em;
 }
+
+
 header ul:first-of-type a{
-    color: white;
-    text-decoration: none; 
+    color: var(--color-secondary);
+    text-decoration: none;
 }
 
 header nav ul li button{
@@ -322,22 +395,22 @@ header section a, main section:nth-of-type(2) a, main section:nth-child(4) butto
 	text-align: center;
 
     font-weight: bold; 
-	font-family: "futura-pt", sans-serif;
+    font-family: var(--font-family-primary);
 	font-weight: 600;
 	font-style: normal;
 	font-size: 0.8em;
 
     border-radius: 1.8em; 
     text-decoration: none;
-    transition: all 0.3s ease; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     max-width: 11em; 
-	width:auto;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-    background-color: white; 
-    color: black; 
-	transition: transform 0.3s ease;
+	padding: 0.5em;
+    background-color:var(--color-background); 
+    color: var(--color-text); 
+}
+
+main section:nth-child(4) button{
+    margin-left: 1em;
 }
 
 header section a{
@@ -365,17 +438,18 @@ header section{
 	justify-content: center;
 	text-align: center;
 
-    height: 25em;
+    height: var(--section-height-hero);
 	background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
 }
 
-h1 {
-    color: #ffff;
-    font-family: "merriweather", serif;
-    font-weight: 500;
+h2:first-of-type {
+    font-family: var(--font-family-secondary);
+    font-weight: 600;
     font-style: normal;
+    font-size: 2em;
+    display: block;
 }
 
 /******************************/
@@ -408,7 +482,6 @@ h1 {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-	position: relative;
 }
 
 .home main section:nth-of-type(1) ul button{ /* hoe fix ik dat hij op een plek blijft */
@@ -423,13 +496,13 @@ h1 {
 
 	border-radius: 3.2rem;
 	padding: 1em;
-	background: #fff;
+	background: var(--color-background);
 	
 }
 
 .home main section:nth-of-type(1) ul button:nth-of-type(1){
 	position: absolute;  
-    left: 20px;     
+    left: 20px; 
     display: none; 
 }
 
@@ -440,7 +513,7 @@ h1 {
 }
 
 .home main section:nth-of-type(1) a{
-	background-color: #111;
+	background-color:var(--color-primary);
 	padding:0.5em;
 	width: 5em;
 	text-align: center;
@@ -449,7 +522,7 @@ h1 {
 	
 	text-decoration: none;
 	font-weight: bold;
-	font-family: "futura-pt", sans-serif;
+    font-family: var(--font-family-primary);
 	font-weight: 500;
 	font-style: normal;	
 }
@@ -464,6 +537,7 @@ h1 {
 /*******************************/
 /* SECTION 2 - FLEXBOX STYLING */
 /*******************************/
+
 .home main section:nth-of-type(2) {
     display: flex;
     flex-direction: column;
@@ -481,7 +555,7 @@ h1 {
 .home main section:nth-of-type(2) ul, p {
     margin: 1em 0.5em 2em 1em;
     color: white;
-    font-family: "futura-pt", sans-serif;
+    font-family: var(--font-family-primary);
     font-weight: 500;
     font-style: normal;
 }
@@ -489,19 +563,22 @@ h1 {
 .home main section:nth-of-type(2) h2 {
     margin-left: 0.5em;
     color: white;
-    font-family: "merriweather", serif;
+    font-family: var(--font-family-secondary);
     font-weight: 400;
     font-style: normal;
 }
 
-.home main section:nth-of-type(2) a{
+.home main section:nth-of-type(2) li a {
 	padding: 0.5em;
 }
 
+h3{
+    font-family: var(--font-family-primary);
+}
 
 .home main section:nth-child(3) {
     padding: 1.25em;
-    background-color: #f7f7f7;
+    background-color:var(--color-background);
     border-radius: 0.6em;
 }
 
@@ -517,7 +594,7 @@ h1 {
     padding-left: 0;
     padding-right: 0;
 
-    overflow-x: auto; 
+    overflow-x: auto;
 }
 
 
@@ -526,7 +603,7 @@ h1 {
     flex-direction: column;
     flex-grow: 1;
 
-    background-color: #e0e0e0; 
+    background-color: var(--color-highlight);
     padding: 1em;
     border-radius: 0.5em;
     height: auto; 
@@ -545,12 +622,12 @@ h1 {
 
 
 .home main section:nth-child(3) h2{
-    font-family: "merriweather", serif;
+    font-family: var(--font-family-secondary);
     font-weight: 400;
     font-style: normal;
     font-size: 1.4em; 
     white-space: normal;
-	color:black;
+	color:var(--color-text)
 }
 
 .home main section:nth-child(3) ul li p {
@@ -594,14 +671,13 @@ h1 {
 }
 
 .home main section:nth-child(4) h2{
-	color: white;
+	color:var(--color-text-secondary)
 	
 }
 
-
 footer{
 	background-color: black;
-	color: white;
+	color:var(--color-text-secondary);
 	display: flex;
 	flex-direction: column;
 }
@@ -614,7 +690,7 @@ footer h2{
 }
 
 footer a{
-	color: white;
+	color:var(--color-text-secondary);
 }
 
 footer section{
@@ -629,14 +705,14 @@ footer input{
 	width: 100%;
     padding: 0;
     font-size: 1em;
-	color:white;
+	color:var(--color-text-secondary);
 }
 
 footer section:nth-of-type(2) button{
 	display: flex;
 	text-align: left;
 	margin-top: 1em;
-	background-color: #fff;
+	background-color:var(--color-background);
 	padding: 1em;
 	border-radius: 2em;
 }
@@ -664,7 +740,7 @@ footer section:nth-child(3) ul{
 	list-style: none;
 }
 footer section:nth-child(3) li a{
-	border-color: #fff;
+	border-color:var(--color-background);
 	border: 3px solid;
 	background-color: transparent;
 	padding: 0.4em;
@@ -676,7 +752,7 @@ footer section:nth-child(3) li a{
 
 	font-size: 1.1em;
 	text-decoration: none;
-	font-family: "futura-pt", sans-serif;
+	font-family: var(--font-family-secondary);
 	font-weight: 500;
 	font-style: normal;
 }
@@ -691,7 +767,7 @@ footer section:last-of-type div{
 	list-style-type: none;
 	
 	font-size:0.8em;
-	font-family: "futura-pt", sans-serif;
+	font-family: var(--font-family-secondary);
 	font-weight: 300;
 	font-style: normal;
 }
@@ -711,27 +787,29 @@ footer section:last-of-type ul li, footer section:last-of-type ul li a{
 	margin-top: 2em;
 }
 
+
+
 /*******************************/
 /* STYLING - Activismepagina*/
 /*******************************/
 
 .activisme main{
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-column: 1fr;
 }
 .activisme header section{
     place-items: center; 
     text-align: center;
 
     background-image: url(../images/activisme/activismeheader.jpg);
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+    background-position:center;
 }
 
 .activisme header h2{
-	font-family: "merriweather", serif;
+	font-family:var(--font-family-secondary);
     font-weight: 500;
-    color: white;
+    color:var(--color-text-secondary);
     font-size: 1.5em;
 
 	justify-content: center;
@@ -753,7 +831,7 @@ footer section:last-of-type ul li, footer section:last-of-type ul li a{
 }
 
 .activisme main section:first-of-type h2{
-	color: #111;
+	color:var(--color-text);
 	display:block;
 }
 
@@ -761,11 +839,11 @@ footer section:last-of-type ul li, footer section:last-of-type ul li a{
 .activisme main section:nth-child(2){
 	background-image: unset;
 	margin-top: 0;
-	color: #111;
+	color: var(--color-text);
 }
 
 .activisme main section:nth-child(2) h2{
-	color: #111;
+	color:var(--color-secondary);
 }
 
 
@@ -816,12 +894,12 @@ margin-bottom: 2em;
 	font-family: "futura-pt", sans-serif;
 	font-weight: 700;
 	font-style: normal;
-	color:white;
+	color:var(--color-text-secondary);
 	font-size: 1em;
 }
 
 .activisme main section:nth-child(1) li a{
-	color: white;;
+	color:var(--color-text-secondary);
     border: 3px solid;
     background-color: transparent;
 
@@ -832,30 +910,47 @@ margin-bottom: 2em;
 
     font-size: 1.1em;
     text-decoration: none;
-    font-family: "futura-pt", sans-serif;
+    font-family: var(--font-family-secondary);
     font-weight: 500;
     font-style: normal;
 	
 }
 
+.activisme main section:nth-of-type(1) li{
+    background-size: cover;
+}
+
 .activisme main section:nth-of-type(1) li:nth-child(1){
 	background-color: #2b80a8;
+}
+.activisme main section:nth-of-type(1) li:nth-child(1):hover{
+    background-image: url(../images/activisme/activisme.jpg);
 }
 
 .activisme main section:nth-of-type(1) li:nth-child(2){
 	background-color: #2c849c;
 }
 
+.activisme main section:nth-of-type(1) li:nth-child(2):hover{
+    background-image: url(../images/activisme/Vjosa.jpg);
+}
 
 .activisme main section:nth-of-type(1) li:nth-child(3){
 	background-color: #368684;
 }
 
+.activisme main section:nth-of-type(1) li:nth-child(3):hover{
+    background-image: url(../images/activisme/Artifishal.jpg);
+    background-position:center;
+}
 
 .activisme main section:nth-of-type(1) li:nth-child(4){
 	background-color: #00947b;
 }
 
+.activisme main section:nth-of-type(1) li:nth-child(4):hover{
+background-image: url(../images/activisme/WeThePower.jpg);
+}
 .activisme main section:nth-child(2) ul{
 	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); 
@@ -878,7 +973,7 @@ margin-bottom: 2em;
     width: 100%; 
     max-width: 30em;
 	height: 20em; 
-    background-color: #f5f5f5;
+    background-color: var(--color-background);
     border-radius: 0.5em; 
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1); 
     padding: 1.5em; 

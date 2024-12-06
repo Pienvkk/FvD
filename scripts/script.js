@@ -1,36 +1,49 @@
 // JavaScript Document
 console.log("hi");
 
-var menu = document.querySelector("nav ul:nth-of-type(2)"); 
-var menuButton  = document.querySelector("nav ul:nth-of-type(2) summary button");
-var sluitButton = document.querySelector ("nav ul:nth-of-type(2) details button:nth-of-type(2)")
-var OpenSubmenu1Button = document.querySelector("nav details ul:nth-of-type(2) >  li:nth-of-type(1) > button")
-var OpenSubmenu1ButtonLinkjes = document.querySelector("nav details ul:nth-of-type(2) >  li:nth-of-type(1)> ul")
-var Opensubmenu2button = document.querySelector(" nav details ul:nth-of-type(2) >  li:nth-of-type(2)> button")
-var Opensubmenu2ButtonLinkjes = document.querySelector(" nav details ul:nth-of-type(2) >  li:nth-of-type(2)> ul")
 
-menuButton.addEventListener("click", openMenu);
+const HamburgerKnop = document.querySelector("nav ul:nth-of-type(2) li:first-of-type > button");
+const sluitButton = document.querySelector("header nav button:nth-of-type(2)");
+const OpenSubmenu1Button = document.querySelector("div > ul:nth-of-type(2) > li:nth-of-type(1) button");
+const OpenSubmenu1ButtonLinkjes = document.querySelector("nav ul:nth-of-type(2) >  div li:nth-of-type(1)> ul");
+const Opensubmenu2button = document.querySelector(" nav ul:nth-of-type(2) >  div li:nth-of-type(2)> button");
+const Opensubmenu2ButtonLinkjes = document.querySelector(" nav ul:nth-of-type(2) >  div li:nth-of-type(2)> ul");
+const Menu = document.querySelector("nav div")
+
+HamburgerKnop.addEventListener("click", openMenu);
 
 function openMenu(){
-    menu.classList.add ("toonMenu");
+    Menu.classList.add ("toonMenu");
+
+    document.body.classList.add("no-scroll")
+
+    sluitButton.classList.remove("knopjeWeg")
+
+    console.log("hoi")
   }
 
 sluitButton.addEventListener("click", sluitMenu);
 
-function sluitMenu () {
-    menu.classList.add("sluitMenu");
+function sluitMenu(){
+  Menu.classList.remove("toonMenu");
+
+  document.body.classList.add("no-scroll")
+
+  sluitButton.classList.add("knopjeWeg")
+
+  console.log("doei")
 }
 
 
 OpenSubmenu1Button.addEventListener("click", function(){
     
-OpenSubmenu1ButtonLinkjes.classList.toggle("toonSubMenu")
+OpenSubmenu1ButtonLinkjes.classList.toggle("toonSubMenu");
 });
 
 
 Opensubmenu2button.addEventListener("click", function(){
     
-Opensubmenu2ButtonLinkjes.classList.toggle("toonSubMenu2")
+Opensubmenu2ButtonLinkjes.classList.toggle("toonSubMenu2");
 });
 
 

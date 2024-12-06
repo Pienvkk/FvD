@@ -237,6 +237,20 @@ calc 50% -8rem
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  <img src="../FvD/readme-images/test/test2pagina1.jpeg">
+  <img src="../FvD/readme-images/test/test2pagina2.jpeg">
+  <img src="../FvD/readme-images/test/test2pagina3.jpeg">
+  <img src="../FvD/readme-images/test/test2pagina4.jpeg">
+  <img src="../FvD/readme-images/test/test2pagina5.jpeg">
+
+  
+  verbetering:
+
+  - Alt-teksten erbij gedaan
+  - List & ul toegevoegd
+  - duidelijke header indeling
+
+
 </details>
 
 
@@ -257,8 +271,9 @@ calc 50% -8rem
 
   | Pien                   | Sam   | Loek   | Gail  |
   
-  | grid navigatie         |
-  | Html indeling grote nav|
+  | Grid navigatie         |
+  | Dark-mode              |
+  |knopje menu             |    
 
 
   ### Verslag van meeting
