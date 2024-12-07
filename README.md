@@ -191,7 +191,7 @@ Alle punten die veranderd moeten worden heb ik groen gemaakt.
   
   | uitklap navigatie       |
   | waar java voor gebruiken 
-      hoe voor home animatie|
+   hoe voor home animatie|
   |positioneren en grootte images activism|
   |button verplaats bij home scroll|
   |eerste li van tweede gaat niet in hokje|
@@ -246,7 +246,7 @@ calc 50% -8rem
   
   verbetering:
 
-  - Alt-teksten erbij gedaan
+  - Alt-teksten erbij gedaan (moet nog afgemaakt worden)
   - List & ul toegevoegd
   - duidelijke header indeling
 
@@ -273,16 +273,16 @@ calc 50% -8rem
   
   | Grid navigatie         |
   | Dark-mode              |
-  |knopje menu             |    
+  | knopje menu             |    
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Menu button in de div en een absolute gegeven
+  - Dark-mode laten reageren
+  - alt-teksten af maken
+
 
 </details>
 
@@ -296,7 +296,7 @@ calc 50% -8rem
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/eindgesprek/nav.png" width="375px" alt="uitkomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -308,7 +308,9 @@ calc 50% -8rem
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+   <img src="readme-images/eindgesprek/nav.png" width="375px" alt="uitkomst opdracht 1">
+   het is me niet gelukt om de nav volledig te laten werken als dat de website liet zien. 
+   
 </details>
 
 
@@ -324,8 +326,9 @@ calc 50% -8rem
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. bron 1 (https://eu.patagonia.com/gb/en/activism/) alle symbolen, plaatsjes en iconen zijn voor de website.
+  2. bron 2 (https://heroicons.com/) de nav iconen zijn hiervandaan. 
+  3. bron 3 (https://developer.mozilla.org/en-US/) voor grid, details summary
+
 
 </details>

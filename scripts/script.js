@@ -3,7 +3,7 @@ console.log("hi");
 
 
 const HamburgerKnop = document.querySelector("nav ul:nth-of-type(2) li:first-of-type > button");
-const sluitButton = document.querySelector("header nav button:nth-of-type(2)");
+const sluitButton = document.querySelector("div button:nth-of-type(1)");
 const OpenSubmenu1Button = document.querySelector("div > ul:nth-of-type(2) > li:nth-of-type(1) button");
 const OpenSubmenu1ButtonLinkjes = document.querySelector("nav ul:nth-of-type(2) >  div li:nth-of-type(1)> ul");
 const Opensubmenu2button = document.querySelector(" nav ul:nth-of-type(2) >  div li:nth-of-type(2)> button");
@@ -41,10 +41,27 @@ OpenSubmenu1ButtonLinkjes.classList.toggle("toonSubMenu");
 });
 
 
-Opensubmenu2button.addEventListener("click", function(){
+// Opensubmenu2button.addEventListener("click", function(){
     
-Opensubmenu2ButtonLinkjes.classList.toggle("toonSubMenu2");
-});
+// Opensubmenu2ButtonLinkjes.classList.toggle("toonSubMenu2");
+// });
+
+
+// dark mode
+
+const modeToggle = document.querySelector(".switch input");
+
+modeToggle.onclick = changeMode;
+
+function changeMode() {
+  document.body.classList.toggle("dark-mode");
+}
+
+
+// console.log(modeToggle)
+// modeToggle.addEventListener("change", () => {
+  
+// });
 
 
 

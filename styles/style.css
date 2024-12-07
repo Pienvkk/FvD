@@ -28,7 +28,7 @@
     --font-size-medium: 1em;
     --font-size-large: 1.4em;
     --font-size-xlarge: 1.5em;
-    --border-radius: 0.5em;
+    --bs-border-radius: 0.5em;
     
     --section-height-hero: 25em;
     --section-height-large: 50em;
@@ -36,26 +36,60 @@
     --header-height: 4em;
 }
 
-/*
-html {
-    background-color: var( --color-background);
-    color: var(--color-text-);
-  }
-  
 @media (prefers-color-scheme:dark) {
 	:root {
-        --color-background: #121212;
+        --color-background: white;
     }
 }
 
-input[type="radio"][value="light"]:checked fieldset {
-	color-scheme:light;
-}
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switch span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-background);
+    border-radius: 34px;
+    transition: 0.4s;
+  }
+  
+  span:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--color-text);
+    border-radius: 50%;
+    transition: 0.4s;
+  }
 
+  body.dark-mode .switch span:before {
+    left: 30px;
+  }
 
-input[type="radio"][value="dark"]:checked fieldset {
-	color-scheme:dark;
-}
+  body.dark-mode {
+    --color-background:#121212;
+    --color-text: white;
+    --color-secondary:#121212;
+  }
+  
 
 
 
@@ -87,6 +121,7 @@ h1{
 
 h2{
 	margin-left: 0.5em;
+    color: white;
 }
 
 
@@ -114,7 +149,7 @@ header ul:first-of-type button, header ul:first-of-type button img{
 }
 
 header p {
-    color: var(--color-primary);
+    color: var(--color-text-secondary);
 } 
 
 header ul li {
@@ -153,16 +188,10 @@ header section{
 }
 
 h2 {
-    color: var(--color-secondary);
     font-family: var(--font-family-secondary);
     font-weight: 500;
     font-style: normal;
 }
-
-.home header section h2{
-	color: var(--color-secondary);
-}
-
 
 
 /******************************/
@@ -189,13 +218,17 @@ nav{
     justify-content: space-between; 
     align-items: center;
     
-    background-color: var(--color-highlight);
+    background-color: var(--color-secondary);
     width: 100%;
 }
 
 
-div > ul:nth-of-type(2) > li:nth-of-type(1) button{
-    background-color: #00947b;
+div > ul:nth-of-type(2) > li button{
+    color:var(--color-text);
+}
+
+nav ul:first-of-type a{
+    color:var(--color-text);
 }
 
 nav p {
@@ -233,6 +266,7 @@ nav div {
     overflow: scroll;
     display: grid;
     grid-template-columns: 1fr;
+    z-index: 999;
 }
 
 @media (min-width: 700px) {
@@ -247,7 +281,8 @@ nav div {
        z-index: 1;
     }
 
-    div > ul:nth-of-type(1){
+    
+nav ul:nth-of-type(2) li:first-of-type:nth-of-type(1) ul:nth-of-type(1){
     display: none;
   }
 
@@ -264,7 +299,9 @@ nav div {
    translate: 100% 100%;
 }
 
-nav ul:nth-of-type(2) div button:first-of-type{
+nav ul:nth-of-type(2) div > button:first-of-type{
+  position: absolute;
+    right: 0;
   cursor: pointer;
 }
 
@@ -278,25 +315,6 @@ nav li{
     justify-content: space-between;
 }
 
-nav ul:first-of-type li a {
-    color: var(--color-primary);
-}
- 
-nav div li:first-of-type>  li:nth-of-type(1),  nav div ul:nth-of-type(2) >  li:nth-of-type(2){
-    display: grid;
-}
-
-nav div:nth-of-type(2) li:first-of-type>  li:nth-of-type(1)> ul, nav div ul:nth-of-type(2) >  li:nth-of-type(2)> ul{
-    display: none;
-}
-
-nav div:nth-of-type(2) li:first-of-type > li:nth-of-type(1) > ul.toonSubMenu {
-    display: block;               
-}
-
-nav div:nth-of-type(2) li:first-of-type>  li:nth-of-type(2) >ul.toonSubMenu2{
-    display: block;
-}
 nav div:nth-of-type(2) li:first-of-type>  li:nth-of-type(1) > button, nav details ul:nth-of-type(2) >  li:nth-of-type(2)> button{
     cursor: pointer;
 }
@@ -321,31 +339,23 @@ nav ul:nth-of-type(2) li:first-of-type li,nav ul:nth-of-type(2) li{
     justify-self: left;
 }
 
-nav ul:nth-of-type(2) li:first-of-type,nav ul:nth-of-type(2) li button {
+nav ul:nth-of-type(2) li:first-of-type > nav ul:nth-of-type(2) > li button {
     font-family: var(--font-family-primary);
     font-weight: 700;
     font-style: normal;
+    color: var(--color-text);
 }
 
 nav ul:nth-of-type(2) li:first-of-type:nth-of-type(1) li svg{
    width: 1em;
 }
 
-nav ul:nth-of-type(2) ul:last-of-type{
+nav ul:nth-of-type(2) ul{
     display: flex;
     flex-direction: column;
-}
+} 
 
-nav ul:nth-of-type(2) li:first-of-type:nth-of-type(1) ul:nth-of-type(1),div:nth-of-type(1) ul:nth-of-type(2) {
-    display: flex;
-    flex-direction: column;
-}
-
-
-nav ul:nth-of-type(2) nav ul:nth-of-type(2) li:first-of-type > button:nth-of-type(1){
-    cursor: pointer;
-}
-
+ 
 nav div .toonMenu{
     translate: 0% 0%;
 }
@@ -356,14 +366,33 @@ nav div .toonMenu{
 
 nav ul:nth-of-type(2) ul:nth-of-type(3) li{
   background-color: #555;
-  padding: 4em 5em 6em 6em;
   border-radius: var(--bs-border-radius);
   width: 20em;
   height: 13em;
+}
 
-  display: flex;
-  text-align: center;
-  justify-self: center;
+nav ul:nth-of-type(2) ul:nth-of-type(3) li:nth-of-type(1){
+    background-image: url(../images/menufotos/ProtectTheOceanMenu.jpg);
+    background-size: cover;  
+}
+nav ul:nth-of-type(2) ul:nth-of-type(3) li:nth-of-type(2){
+    background-image: url(../images/menufotos/PatagoniActionworksMenu2.jpg);
+}
+
+nav ul:nth-of-type(2) ul:nth-of-type(3) li:nth-of-type(3){
+    background-color: #603c1a;
+}
+
+nav ul:nth-of-type(2) ul:nth-of-type(3){
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    height: 100%;        
+}
+
+nav ul:nth-of-type(2) ul:nth-of-type(3) a{
+    margin-top: 5em;
+    color:var(--color-text-secondary);
 }
 div:nth-of-type(1)[open]{
     background-color: var(--color-secondary);
@@ -376,6 +405,7 @@ div:nth-of-type(1)[open]{
 
 nav ul:nth-of-type(2) li:first-of-type li{
     margin-top: 1.5em;
+    color:var(--color-text);
 }
 
 
@@ -452,6 +482,7 @@ h2:first-of-type {
     display: block;
 }
 
+
 /******************************/
 /* SECTION 1 - GRID STYLING */
 /******************************/
@@ -464,8 +495,8 @@ h2:first-of-type {
 	margin-right: 1em;
 }
 
-.home main section:nth-of-type(1) h2{
-	display: none;
+.home main section:nth-of-type(1) h3 {
+    color:var(--color-text)
 }
 
 .home main section:nth-of-type(1) ul{
@@ -484,11 +515,10 @@ h2:first-of-type {
     white-space: nowrap;
 }
 
-.home main section:nth-of-type(1) ul button{ /* hoe fix ik dat hij op een plek blijft */
+.home main section:nth-of-type(1) button:nth-of-type(2){
 	position: absolute;
 	right: 10px; 
-  	top: calc(50%-8rem);
-
+    transform: translate(-20%, 8rem);
 
 	display: inline-flex;
 	place-content: center center;
@@ -496,10 +526,21 @@ h2:first-of-type {
 
 	border-radius: 3.2rem;
 	padding: 1em;
-	background: var(--color-background);
 	
 }
 
+.home main section:nth-of-type(1) button:nth-of-type(1){ 
+    position: absolute;
+    left: 10px; 
+    transform: translate(-5%, 8rem);
+   
+	display: inline-flex;
+	place-content: center center;
+	align-items: center;
+
+	border-radius: 3.2rem;
+	padding: 1em;
+}
 .home main section:nth-of-type(1) ul button:nth-of-type(1){
 	position: absolute;  
     left: 20px; 
@@ -513,11 +554,11 @@ h2:first-of-type {
 }
 
 .home main section:nth-of-type(1) a{
-	background-color:var(--color-primary);
+	background-color:var(--color-text);
 	padding:0.5em;
 	width: 5em;
 	text-align: center;
-	color: white;
+	color: var(--color-secondary);
 	border-radius: 20em;
 	
 	text-decoration: none;
@@ -574,6 +615,7 @@ h2:first-of-type {
 
 h3{
     font-family: var(--font-family-primary);
+    color:white;
 }
 
 .home main section:nth-child(3) {
@@ -675,120 +717,6 @@ h3{
 	
 }
 
-footer{
-	background-color: black;
-	color:var(--color-text-secondary);
-	display: flex;
-	flex-direction: column;
-}
-
-footer h2{
-	font-size: 1.1em;
-	font-family: "futura-pt", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-}
-
-footer a{
-	color:var(--color-text-secondary);
-}
-
-footer section{
-	margin-left: 0.5em;
-	margin-bottom: 2em ;
-	margin-right: 0.5em;
-}
-
-footer input{
-	border-bottom: 2px solid;
-	background-color: transparent;
-	width: 100%;
-    padding: 0;
-    font-size: 1em;
-	color:var(--color-text-secondary);
-}
-
-footer section:nth-of-type(2) button{
-	display: flex;
-	text-align: left;
-	margin-top: 1em;
-	background-color:var(--color-background);
-	padding: 1em;
-	border-radius: 2em;
-}
-
-footer section:nth-child(1) ul:first-of-type img{
-	width: 6em;
-}
-
-footer section:nth-child(1) ul:first-of-type{
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	margin-bottom: 2em;
-}
-
-footer section:nth-child(1) ul:first-of-type h3{
-	font-family: "futura-pt", sans-serif;
-	font-weight: 700;
-	font-style: normal;
-}
-
-footer section:nth-child(3) ul{
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-}
-footer section:nth-child(3) li a{
-	border-color:var(--color-background);
-	border: 3px solid;
-	background-color: transparent;
-	padding: 0.4em;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	padding-right: 1em;
-	padding-left: 1em;
-	border-radius: 2em;
-
-	font-size: 1.1em;
-	text-decoration: none;
-	font-family: var(--font-family-secondary);
-	font-weight: 500;
-	font-style: normal;
-}
-
-footer section:nth-child(3) li{
-	margin: 1em;
-}
-
-footer section:last-of-type div{
-	flex-direction: row;
-    display: flex;
-	list-style-type: none;
-	
-	font-size:0.8em;
-	font-family: var(--font-family-secondary);
-	font-weight: 300;
-	font-style: normal;
-}
-
-footer section:last-of-type h2{
-	margin-bottom: 1em;
-}
-
-footer section:last-of-type ul{
-	margin-bottom: 1em;
-	margin-right: 1em;
-}
-
-footer section:last-of-type ul li, footer section:last-of-type ul li a{
-	text-decoration: none;
-	list-style-type: none;
-	margin-top: 2em;
-}
-
-
-
 /*******************************/
 /* STYLING - Activismepagina*/
 /*******************************/
@@ -820,10 +748,10 @@ footer section:last-of-type ul li, footer section:last-of-type ul li a{
 .activisme header section p {
     display: grid;
 	grid-template-rows: repeat(4, auto);
+    color: var(--color-text-secondary);
     width: 20em; 
     max-width: 50em; 
 }
-
 
 .activisme main section:nth-child(1){
 	margin-top: 4em;
@@ -843,7 +771,7 @@ footer section:last-of-type ul li, footer section:last-of-type ul li a{
 }
 
 .activisme main section:nth-child(2) h2{
-	color:var(--color-secondary);
+	color:var(-color-secondar-y);
 }
 
 
@@ -1037,4 +965,177 @@ background-image: url(../images/activisme/WeThePower.jpg);
 
 .activisme main section:nth-child(2) ul button, .activisme main section:nth-child(2) ul a {
 	margin-top: 19em;
+}
+
+
+
+footer{
+	background-color: black;
+	color:var(--color-text-secondary);
+	display: flex;
+    flex-direction: column;
+}
+
+footer h2{
+	font-size: 1.1em;
+	font-family: "futura-pt", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+footer a{
+	color:var(--color-text-secondary);
+}
+
+footer section{
+	margin-left: 0.5em;
+	margin-bottom: 2em ;
+	margin-right: 0.5em;
+}
+
+footer input{
+	border-bottom: 2px solid;
+	background-color: transparent;
+	width: 100%;
+    padding: 0;
+    font-size: 1em;
+	color:var(--color-text-secondary);
+}
+
+footer section:nth-of-type(2) button{
+	display: flex;
+	text-align: left;
+	margin-top: 1em;
+	background-color:var(--color-background);
+	padding: 1em;
+	border-radius: 2em;
+}
+
+footer section:nth-child(1) ul:first-of-type svg{
+	width: 6em;
+    fill: var(--color-highlight);
+
+}
+
+nav svg {
+    fill:var(--color-secondary);
+    stroke:var(--color-text); 
+}
+footer section:nth-child(1) ul:first-of-type{
+    display: flex;
+    flex-direction: column;
+}
+
+footer section:nth-child(1) ul:first-of-type li {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    gap: 0.75em;
+    width: 60%;
+}
+
+
+footer section:nth-child(1) ul:first-of-type h3{
+	font-family: "futura-pt", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+footer section:nth-child(3) ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+footer section:nth-child(3) li a{
+	border-color:var(--color-background);
+	border: 3px solid;
+	background-color: transparent;
+	padding: 0.4em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-right: 1em;
+	padding-left: 1em;
+	border-radius: 2em;
+
+	font-size: 1.1em;
+	text-decoration: none;
+	font-family: var(--font-family-secondary);
+	font-weight: 500;
+	font-style: normal;
+}
+
+footer section:nth-child(3) li{
+	margin: 1em;
+}
+
+footer section:last-of-type div{
+	flex-direction: row;
+    display: flex;
+	list-style-type: none;
+	
+	font-size:0.8em;
+	font-family: var(--font-family-secondary);
+	font-weight: 300;
+	font-style: normal;
+}
+
+footer section:last-of-type h2{
+	margin-bottom: 1em;
+}
+
+footer section:last-of-type ul{
+	margin-bottom: 1em;
+	margin-right: 1em;
+}
+
+footer section:last-of-type ul li, footer section:last-of-type ul li a{
+	text-decoration: none;
+	list-style-type: none;
+	margin-top: 2em;
+}
+
+@media screen and (min-width: 995px) {
+    footer section:nth-child(1) ul:first-of-type {
+    display: flex;
+    flex-direction: row;
+      padding: 2em 1em;
+      width: 100%;
+    }
+
+    footer ul:first-of-type li {
+		display: flex;
+        flex-direction: row;
+		text-align: center;
+		gap: 0.75em;
+		width: 20%;
+	}
+
+    footer form {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	
+	footer input{
+		width: 100%;
+		background-color: black;
+		font-size: 1em;
+		padding: 1em;
+		border: none;
+	}
+    
+    footer section:nth-of-type(2) button {
+		background-color: white;
+		color: black;
+		border: none;
+		width: fit-content;
+		text-decoration: none;
+		font-size: 0.9em;
+		font-weight: 600;
+		border-radius: 3em;
+		padding: 0.75em 2em;
+	}
+	
 }
