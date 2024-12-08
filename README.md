@@ -37,9 +37,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home 
+    <!-- ik heb de indeling van de breakwdownschetsaangehouden-->
   <img src="readme-images/Home/Home1.jpg" width="375px" 
   alt="Homepagina sportmerk Patagonia">
-
   <img src="readme-images/Home/home2.png" width="375px" 
    alt="Homepagina sportmerk patagonia" alt="Homepagina sportmerk Patagonia">
 
@@ -58,6 +58,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
    
   #### Screenshot(s) van de tweede pagina (small screen):
   Activisme  
+    <!-- ik heb de indeling van de breakwdownschetsaangehouden-->
   <img src="readme-images/Activismepagina/Activismepagina1.png" width="375px" alt="Activismepagina sportmerk Patagonia">
 
    <img src="readme-images/Activismepagina/Activismepagina2.png" width="375px" alt="Activismepagina sportmerk Patagonia">
@@ -296,21 +297,31 @@ calc 50% -8rem
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/eindgesprek/nav.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="./readme-images/eindgesprek/Homewebsitepatagonia.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="./readme-images/eindgesprek/actvismpagina.png" width="375px" alt="uitkomst opdracht 1">
 
+  de de paginas zijn over het algemeen zover gelukt dat ik wel trots ben op het resultaat. De vormgeving en een deel van de navigatie en de nav werkt hetzelfde en dat is leuk om te zien.
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+ <img src="readme-images/eindgesprek/grid-erea.png" width="375px" alt="uitkomst opdracht 1">
+ Ik heb geleerd hoe je met behulp van grid een indeling maakt die zich aanpast aan de schermen door grid te gebruiken. Dit is een hele handige tool en dit ging vooral bij de activisme pagina voor de fotos voor de eerste stap heel goed.
 
+  <img src="readme-images/eindgesprek/screen.png" width="375px" alt="uitkomst opdracht 1">
+
+  Uiteindelijk heb ik ook een verstelbare navigatie gemaakt die zich aanpast aan het schermen en iets in beeld komt hier ben ik trots op dat dit grotendeels werkt.
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
    <img src="readme-images/eindgesprek/nav.png" width="375px" alt="uitkomst opdracht 1">
    het is me niet gelukt om de nav volledig te laten werken als dat de website liet zien. 
-   
+    <img src="readme-images/eindgesprek/scroll.png" width="375px" alt="uitkomst opdracht 1">
+    het is me niet gelukt om de de knoppen voor de scrolbarren af te maken.
+     
+   <img src="readme-images/eindgesprek/grid-erea.png" width="375px" alt="uitkomst opdracht 1">
+     het is me niet gelukt om grid ereas voor de activisme pagina af te maken.
 </details>
 
 
@@ -329,6 +340,5 @@ calc 50% -8rem
   1. bron 1 (https://eu.patagonia.com/gb/en/activism/) alle symbolen, plaatsjes en iconen zijn voor de website.
   2. bron 2 (https://heroicons.com/) de nav iconen zijn hiervandaan. 
   3. bron 3 (https://developer.mozilla.org/en-US/) voor grid, details summary
-
-
+  4. bron 4 (Bahaa studenten assistenten) hulp van de dark-mode 
 </details>
